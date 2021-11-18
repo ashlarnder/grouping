@@ -16,7 +16,7 @@ The package ‘grouping’ is not yet on CRAN, but you can download it from
 this repository using the following R command:
 
 ``` r
-devtools::install_github("ashlarnder/grouping", ref="0.1.0")
+devtools::install_github("ashlarnder/grouping")
 ```
 
 ## Example
@@ -26,7 +26,7 @@ This is a basic example which shows you the basic use of the function:
 ``` r
 library(grouping)
 group_summary(palmerpenguins::penguins, island, mean)
-#> # A tibble: 3 x 6
+#> # A tibble: 3 × 6
 #>   island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year
 #>   <fct>              <dbl>         <dbl>             <dbl>       <dbl> <dbl>
 #> 1 Biscoe              45.3          15.9              210.       4716. 2008.
@@ -43,7 +43,7 @@ functions to the same dataset.
 
 ``` r
 group_summary(mtcars, cyl, c(mean,sd))
-#> # A tibble: 3 x 21
+#> # A tibble: 3 × 21
 #>     cyl mpg_1 mpg_2 disp_1 disp_2  hp_1  hp_2 drat_1 drat_2  wt_1  wt_2 qsec_1
 #>   <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl> <dbl>  <dbl>  <dbl> <dbl> <dbl>  <dbl>
 #> 1     4  26.7  4.51   105.   26.9  82.6  20.9   4.07  0.365  2.29 0.570   19.1

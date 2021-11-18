@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of grouping is to group your data set by a variable and then
+The goal of ‘grouping’ is to group your data set by a variable and then
 summarize the remaining numerical variables based on a defined summary
 function. See the function documentation details for further details.
 
@@ -21,7 +21,8 @@ devtools::install_github("ashlarnder/grouping")
 
 ## Example
 
-This is a basic example which shows you the basic use of the function:
+This is a simple example which shows you the primary use of the
+function:
 
 ``` r
 library(grouping)
@@ -34,12 +35,12 @@ group_summary(palmerpenguins::penguins, island, mean)
 #> 3 Torgersen           39.0          18.4              191.       3706. 2008.
 ```
 
-This package is a huge time-saver. When working with large, unruly
-datasets and when working across multiple different datasets,
-summarizing is a key things you will be doing. This package puts
-summarizing data at the tip of your finger. This will allow you to apply
-a cleaner and quicker data analysis. You can even apply two summary
-functions to the same dataset.
+This package is a huge time-saver in repetitive data analysis. When
+working with large, unruly data sets and when working across multiple
+different data sets, summarizing is a key function that is used. This
+package puts summarizing data at the tip of your finger. It allows you
+to apply a cleaner and quicker data analysis. You can even
+simultaneously apply two summary functions to the same data set.
 
 ``` r
 group_summary(mtcars, cyl, c(mean,sd))
@@ -54,10 +55,10 @@ group_summary(mtcars, cyl, c(mean,sd))
 ```
 
 There is also a check step inherently included in this function.
-Sometimes you forget which dataset you are using, or sometimes your data
-is input as the wrong data class. This function will let you know if
-there is no numerical data to be applied to, by throwing an informative
-error saying “This does not contain numerical data”. I can’t actually
-demonstrate this as the error will prevent the file from knitting.
+Sometimes you forget which data set you are using, or sometimes your
+data is input as the wrong data class. This function will let you know
+if there is no numerical data for the function to be applied to, by
+throwing an informative error saying “This does not contain numerical
+data”. See the function documentation for more info.
 
 This is pretty basic, so you should be able to apply it no problem!

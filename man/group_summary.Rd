@@ -8,7 +8,8 @@ group_summary(data, group, fun)
 }
 \arguments{
 \item{data}{The data set you want to work with. This is named
-data because it is the data set you are working with.}
+data because it is the data set you are working with. There must
+be at least one numerical variable in this data set.}
 
 \item{group}{The variable in the data set you want to group by.
 This is named group because it is the group within the data set
@@ -42,7 +43,9 @@ summary statistic for each subsetted group identified previously
 and for each numerical variable. The function also includes a
 stop criteria that prevents the function from running when
 there is no numerical data in the data set present, as this is
-geared to summary functions of quantitative data.
+geared to summary functions of quantitative data. There are no
+restrictions on the type of the group variable as you may want
+to group by a numerical variable (ex. year).
 }
 \examples{
 group_summary(palmerpenguins::penguins, island, mean)

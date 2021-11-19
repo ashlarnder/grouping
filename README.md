@@ -35,13 +35,10 @@ group_summary(palmerpenguins::penguins, island, mean)
 #> 3 Torgersen           39.0          18.4              191.       3706. 2008.
 ```
 
-<<<<<<< HEAD
 This function requires three inputs in order to run: (1) the data set
 you are analyzing, (2) the variable you want to groupby, and (3) the
 summary function you wish to use.
 
-=======
->>>>>>> b2bb8c8cd7f9e3bab78e8c264c9f05ef7e793177
 This package is a huge time-saver in repetitive data analysis. When
 working with large, unruly data sets and when working across multiple
 different data sets, summarizing is a key function that is used. This

@@ -1,6 +1,6 @@
 Package: grouping
 Title: Data Grouping and Numerical Summarizing
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Ash", "Larnder", , "ashley.larnder@outlook.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2719-4613"))

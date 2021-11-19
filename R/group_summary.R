@@ -1,11 +1,12 @@
-#' @title Group numerical summary
+#' Group numerical summary
 #'
 #' @description This function groups the data by a variable and
 #' then summarizes the remaining numerical variables based on a
 #' defined summary function.
 #'
 #' @param data The data set you want to work with. This is named
-#' data because it is the data set you are working with.
+#' data because it is the data set you are working with. There must
+#' be at least one numerical variable in this data set.
 #' @param group The variable in the data set you want to group by.
 #' This is named group because it is the group within the data set
 #' that you will be grouping by.
@@ -28,7 +29,9 @@
 #'  and for each numerical variable. The function also includes a
 #'  stop criteria that prevents the function from running when
 #'  there is no numerical data in the data set present, as this is
-#'   geared to summary functions of quantitative data.
+#'   geared to summary functions of quantitative data. There are no
+#'   restrictions on the type of the group variable as you may want
+#'   to group by a numerical variable (ex. year).
 #' @references
 #' Vincenzo Coia. (2021). R Functions for Data Analysis (https://stat545.stat.ubc.ca/notes/notes-b01/)
 #' @examples
@@ -45,5 +48,3 @@ group_summary <- function(data, group, fun) {
     dplyr::group_by({{group}}) %>%
     dplyr::summarize(dplyr::across(tidyselect::vars_select_helpers$where(is.numeric), fun, na.rm=TRUE))
 }
-
-
